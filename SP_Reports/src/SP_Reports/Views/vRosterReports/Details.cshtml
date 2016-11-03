@@ -1,0 +1,156 @@
+@model SP_Common_Classes.Models.DB.vRosterReport
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>vRosterReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalcFistName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalcFistName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassAttended)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyPosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyPosition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Family_Note1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Family_Note1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaidStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaidStaff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1MobileNbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1MobileNbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2MobileNbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2MobileNbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonClass)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PersonClass)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PottyTraining)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PottyTraining)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RosterNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RosterNotes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RosterReview)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RosterReview)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialHandling)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpecialHandling)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialHandlingNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpecialHandlingNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visitor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PersonId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

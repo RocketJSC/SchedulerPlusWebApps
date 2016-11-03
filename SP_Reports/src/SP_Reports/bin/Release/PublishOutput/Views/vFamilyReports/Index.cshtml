@@ -1,0 +1,94 @@
+@model IEnumerable<SP_Common_Classes.Models.DB.vFamilyReport>
+
+<h2 class="text-center">Family Report @ViewBag.Title</h2>
+
+<table id="myTable" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                Parents
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visitor)
+            </th>
+            <th>
+                Note/Special Handling
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="vFamilyReports" asp-action="Details" asp-route-id="@item.FamilyId">@Html.DisplayFor(modelItem => item.LastName)</a>
+                </td>
+                <td>
+                    @{Boolean boolParent1Exists = item.Parent1_PersonId != 0; }
+                    @{Boolean boolParent2Exists = item.Parent2_PersonId != 0; }
+                    @{
+                    if (boolParent1Exists && boolParent2Exists)
+                    {
+                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent1_PersonId">
+                        @string.Format("{0}", item.Parent1_CalcFirstName)
+                    </a>
+                    @string.Format(" & ")
+                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent2_PersonId">
+                        @string.Format("{0}", item.Parent2_CalcFirstName)
+                    </a>
+                        }
+                        else
+                        {
+                            if (boolParent1Exists)
+                            {
+                                <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent1_PersonId">
+                                    @string.Format("{0}", item.Parent1_CalcFirstName)
+                                    </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent2_PersonId">
+                                    @string.Format("{0}", item.Parent2_CalcFirstName)
+                                    </a>
+                            }
+                        }
+                    }
+</td>
+                <td>
+                    @{
+                        if (item.Active == "0")
+                        { @(string.Format("InActive")) }
+                        else
+                        if (item.Active == "1")
+                        { @(string.Format("Active")) }
+                        else
+                        if (item.Active == "2")
+                        { @(string.Format("Historical")) }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (item.Visitor == "1")
+                        { @(string.Format("Yes")) }
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Note1)<br />@Html.DisplayFor(modelItem => item.SpecialHandlingNote)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts
+{
+    <script>
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+
+    new $.fn.dataTable.FixedHeader( table );
+} );
+    </script>
+}

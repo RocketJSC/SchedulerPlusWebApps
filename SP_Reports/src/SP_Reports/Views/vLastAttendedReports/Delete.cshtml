@@ -1,0 +1,94 @@
+@model SP_Common_Classes.Models.DB.vLastAttendedReport
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>vLastAttendedReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendanceClass)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttendanceClass)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendanceHdrId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttendanceHdrId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalcFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalcFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassAttended)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateAttended)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyPosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyPosition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PersonId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Person_Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person_Class)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Person_LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person_LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Person_Visitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person_Visitor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visitor)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

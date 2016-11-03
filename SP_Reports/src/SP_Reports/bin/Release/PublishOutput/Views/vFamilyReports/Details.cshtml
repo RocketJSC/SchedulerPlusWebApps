@@ -1,0 +1,74 @@
+@model SP_Common_Classes.Models.DB.vFamilyReport
+
+<h2>Family Detail - @Html.DisplayFor(model => model.LastName) Family</h2>
+
+<div>
+    <h4>vFamilyReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd>
+            @{
+                if (Model.Active == "0")
+                { @(string.Format("InActive")) }
+                else
+if (Model.Active == "1")
+                { @(string.Format("Active")) }
+                else
+if (Model.Active == "2")
+                { @(string.Format("Historical")) }
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            Parent 1<br />First Name
+        </dt>
+        <dd>
+            <a asp-controller="vPersons" asp-action="Details" asp-route-id="@Model.Parent1_PersonId">@Html.DisplayFor(model => model.Parent1_CalcFirstName)</a>
+</dd>
+        <dt>
+            Parent 1<br />Paid Staff
+        </dt>
+        <dd>
+            @{
+                if (Model.Parent1_PaidStaff == "1")
+                { @(string.Format("Yes")) }
+            }
+        </dd>
+        <dt>
+            Parent 2<br />First Name
+        </dt>
+        <dd>
+            <a asp-controller="vPersons" asp-action="Details" asp-route-id="@Model.Parent2_PersonId">@Html.DisplayFor(model => model.Parent2_CalcFirstName)</a>
+</dd>
+        <dt>
+            Parent 2<br />Paid Staff
+        </dt>
+        <dd>
+            @{
+                if (Model.Parent2_PaidStaff == "1")
+                { @(string.Format("Yes")) }
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor)
+        </dt>
+        <dd>
+            @{
+                if (Model.Visitor == "1")
+                { @(string.Format("Yes")) }
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    @await Component.InvokeAsync("Person", new { selectFamilyId = Model.FamilyId })
+</div>
+

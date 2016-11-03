@@ -1,0 +1,276 @@
+@model SP_Common_Classes.Models.DB.Person
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CountryCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateAdded)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLastActivity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateLastActivity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyPosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyPosition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FollowupInd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FollowupInd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FollowupNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FollowupNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GoesByName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GoesByName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileProvider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MobileProvider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaidStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaidStaff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneType1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneType1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneType2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneType2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneType3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneType3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PottyTraining)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PottyTraining)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactMethod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactMethod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RosterNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RosterNotes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RosterReview)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RosterReview)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Schedule)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Schedule)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StateProvince)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StateProvince)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Suffix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Suffix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TextAllowed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TextAllowed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visitor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WebAccessAllowed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WebAccessAllowed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WebLogonName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WebLogonName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WebPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WebPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipPostalCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ZipPostalCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PersonId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

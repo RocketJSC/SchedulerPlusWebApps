@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Scheduler+Plus Web</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"  />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    </environment>
+</head>
+<body>
+<!-- <body ng-app="vScheduleDetailsApp"> -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SP_Reports</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="vPersons" asp-action="Index">Person</a></li>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index">Family</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Attendance Reports<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectPaidStaff="0">Crib Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectPaidStaff="0">Crawler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectPaidStaff="0">Toddler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectPaidStaff="0">K2 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectPaidStaff="0">K3 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectPaidStaff="0">K4 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Crib Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Crawler Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Toddler Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K2 Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K3 Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K4 Room - Visitors</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectPaidStaff="1">Paid Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Roster Reports<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectActive="1">Crib Room</a></li>
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectActive="1">Crawler Room</a></li>
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectActive="1">Toddler Room</a></li>
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectActive="1">K2 Room</a></li>
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectActive="1">K3 Room</a></li>
+                                <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectActive="1">K4 Room</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index">vLastAttended Reports</a></li>
+                    </ul>
+                    @await Html.PartialAsync("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2016 - Scheduler+Plus Web App</p>
+            </footer>
+        </div>
+        <environment names="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            <script src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+            <script src="~/lib/angular/angular.js"></script>
+            <script src="~/app/vScheduleDetailsApp.js"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+            <script src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
+                    asp-fallback-src="~/lib/angular/angular.min.js"
+                    asp-fallback-test="window.angular">
+            </script>
+        </environment>
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

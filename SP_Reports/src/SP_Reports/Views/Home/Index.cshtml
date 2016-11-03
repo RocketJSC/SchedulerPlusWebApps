@@ -1,0 +1,113 @@
+﻿@model IEnumerable<SP_Common_Classes.Models.DB.vAttendanceReportDate>
+
+<h2 align="Center">Westminster Presbyterian Church Nursery/Preschool Division</h2>
+<div class="row">
+        <div class="col-md-3">
+            <h2 class="text-center">Overview</h2>
+            <ul>
+                <li>
+                    People
+                    <ul>
+                        <li><a asp-area="" asp-controller="vPersons" asp-action="Index" asp-route-selectFamilyPosition="3">Children</a></li>
+                        <li><a asp-area="" asp-controller="vPersons" asp-action="Index" asp-route-selectFamilyPosition="!3">Adults</a></li>
+                        <li><a asp-area="" asp-controller="vPersons" asp-action="Index" asp-route-selectVisitor="1">Visitors</a></li>
+                        <li><a asp-area="" asp-controller="vPersons" asp-action="Index" asp-route-selectPaidStaff="1">Paid Staff</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Families
+                    <ul>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index" asp-route-selectActive="1" asp-route-selectPaidStaff="0">Active</a></li>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index" asp-route-selectActive="0" asp-route-selectPaidStaff="0">InActive</a></li>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index" asp-route-selectActive="2" asp-route-selectPaidStaff="0">Historical</a></li>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Visitors</a></li>
+                        <li><a asp-area="" asp-controller="vFamilyReports" asp-action="Index" asp-route-selectActive="1" asp-route-selectPaidStaff="1">Paid Staff</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2 class="text-center">Reports</h2>
+            <ul>
+                <li>
+                    Attendance
+                    <ul>
+                        <li>
+                            By Room (No Paid Staff)
+                            <ul>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectPaidStaff="0">Crib Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectPaidStaff="0">Crawler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectPaidStaff="0">Toddler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectPaidStaff="0">K2 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectPaidStaff="0">K3 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectPaidStaff="0">K4 Room</a></li>
+                            </ul>
+                        </li>
+                        @*<li>
+                            <a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Visitors (No Paid Staff)</a>
+                            <ul>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Crib Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Crawler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Toddler Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K2 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K3 Room</a></li>
+                                <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">K4 Room</a></li>
+                            </ul>
+                        </li>*@
+                        <li>By Date (No Paid Staff)
+                            <ul>
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        @{string shortDate = item.DateAttended.ToString("MM/dd/yyyy");
+                                        }
+                                        <a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectDateAttended="@item.DateAttended" asp-route-selectPaidStaff="0">@shortDate</a>
+                                    </li>
+                                }
+                            </ul>
+
+
+
+                        </li>
+                        <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectPaidStaff="1">Paid Staff</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectPaidStaff="0">Last Attended</a>
+                    <ul>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectFamilyPosition="3" asp-route-selectPaidStaff="0">Children</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectFamilyPosition="!3" asp-route-selectPaidStaff="0">Adults</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectActive="1" asp-route-selectPaidStaff="0">Active</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectActive="0" asp-route-selectPaidStaff="0">InActive</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectActive="2" asp-route-selectPaidStaff="0">Historical</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectVisitor="1" asp-route-selectPaidStaff="0">Visitors</a></li>
+                        <li><a asp-area="" asp-controller="vLastAttendedReports" asp-action="Index" asp-route-selectPaidStaff="1">Paid Staff</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2 class="text-center">Rosters</h2>
+            <ul>
+                <li>
+                    Sunday Morning Nursery
+                    <ul>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CB" asp-route-selectActive="1">Crib Room</a></li>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CW" asp-route-selectActive="1">Crawler Room</a></li>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="CT" asp-route-selectActive="1">Toddler Room</a></li>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K2" asp-route-selectActive="1">K2 Room</a></li>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K3" asp-route-selectActive="1">K3 Room</a></li>
+                        <li><a asp-area="" asp-controller="vRosterReports" asp-action="Index" asp-route-selectClass="K4" asp-route-selectActive="1">K4 Room</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2 class="text-center">Schedules</h2>
+            <ul>
+                <li><a asp-area="" asp-controller="vScheduleDetailsAPI" asp-action="Index">Sunday Morning Nursery - Paid Staff</a></li>
+                <li>Sunday Morning Nursery - Parents</li>
+                <li>Sunday Morning Nursery - Sunday Sitters</li>
+            </ul>
+        </div>
+    </div>

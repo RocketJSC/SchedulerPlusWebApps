@@ -1,0 +1,145 @@
+@model IEnumerable<SP_Common_Classes.Models.DB.vPerson>
+
+<table id="PersonTable" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyPosition)
+            </th>
+            <th>
+                Note1<br />Note2
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaidStaff)
+            </th>
+            <th>
+                Mobile Number
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visitor)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="vFamilyReports" asp-action="Details" asp-route-id="@item.FamilyId">@Html.DisplayFor(modelItem => item.LastName)</a>
+                </td>
+                <td>
+                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.PersonId">@Html.DisplayFor(modelItem => item.CalcFirstName) @Html.DisplayFor(modelItem => item.Suffix)</a>
+                </td>
+                <td>
+                    @{
+                        if (item.Active == "0")
+                        { @(string.Format("InActive")) }
+                        else
+if (item.Active == "1")
+                        { @(string.Format("Active")) }
+                        else
+if (item.Active == "2")
+                        { @(string.Format("Historical")) }
+                    }
+                </td>
+                <td>
+
+                    @{Boolean boolEmptyDate = item.BirthDate.Year.Equals(1899) && item.BirthDate.Month.Equals(12) && item.BirthDate.Day.Equals(30); }
+                    @{string shortDate = item.BirthDate.ToString("MM/dd/yyyy"); }
+                    @{
+                        if (boolEmptyDate)
+                        {@(string.Format("")) }
+                        else
+                        {@string.Format(shortDate)}
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @{
+                        if (item.FamilyPosition == "1")
+                        { @(string.Format("Head")) }
+                        else
+if (item.FamilyPosition == "2")
+                        { @(string.Format("Spouse")) }
+                        else
+if (item.FamilyPosition == "3")
+                        { @(string.Format("Child")) }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note1)<br />
+                    @Html.DisplayFor(modelItem => item.Note2)
+                </td>
+                <td>
+                    @{
+                        if (item.PaidStaff == "1")
+                        { @(string.Format("Yes")) }
+                    }
+                </td>
+                <td>
+                    @{string MobileNumber = " "; }
+                    @{
+                        if (item.PhoneType1 == "1" && item.PhoneNumber1 != "") { MobileNumber = item.PhoneNumber1; }
+                        else
+                        {
+                            if (item.PhoneType2 == "1" && item.PhoneNumber2 != "") { MobileNumber = item.PhoneNumber2; }
+                            else
+                            { if (item.PhoneType3 == "1" && item.PhoneNumber3 != "") { MobileNumber = item.PhoneNumber3; } }
+                        }
+                        @(string.Format(MobileNumber))
+                    }
+                </td>
+                <td>
+                    @{
+                        if (item.Schedule == "1")
+                        { @(string.Format("Yes")) }
+                        else
+                        { @(string.Format("No")) }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (item.Visitor == "1")
+                        { @(string.Format("Yes")) }
+                    }
+                </td>
+            </tr>
+                        }
+    </tbody>
+</table>
+@section Scripts
+{
+    <script>
+$(document).ready(function() {
+    var table = $('#PersonTable').DataTable();
+
+    new $.fn.dataTable.FixedHeader( table );
+} );
+    </script>
+}

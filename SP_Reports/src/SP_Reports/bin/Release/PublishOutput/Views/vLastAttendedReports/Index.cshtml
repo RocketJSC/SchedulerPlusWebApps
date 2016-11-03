@@ -1,0 +1,96 @@
+@model IEnumerable<SP_Common_Classes.Models.DB.vLastAttendedReport>
+
+<h2 class="text-center">Last Attended Report @ViewBag.Title</h2>
+
+<table id="myTable" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAttended)
+            </th>
+            <th>
+                Attendee
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassAttended)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person_Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person_Visitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person_Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person_PaidStaff)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        string shortDate = item.DateAttended.ToString("MM/dd/yyyy");
+                    }
+                    @Html.DisplayFor(m => shortDate)
+                </td>
+                <td>
+                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.PersonId">@Html.DisplayFor(m => item.Person_LastName), @Html.DisplayFor(m => item.CalcFirstName)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassAttended)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Person_Class)
+                </td>
+                <td>
+                    @{ 
+                        if (item.Person_Visitor == "1")
+                        { @(string.Format("Yes")) }
+                    }
+                </td>
+                <td>
+                    @{ 
+                        if (item.Visitor == "1")
+                        { @(string.Format("Yes")) }
+                        }
+                </td>
+                <td>
+                    @{ 
+                        if (item.Person_Active == "0")
+                        { @(string.Format("InActive")) }
+                        else
+if (item.Person_Active == "1")
+                        { @(string.Format("Active")) }
+                        else
+if (item.Person_Active == "2")
+                        { @(string.Format("Historical")) }
+                    }
+                </td>
+                <td>
+                    @{ 
+                        if (item.Person_PaidStaff == "1")
+                        { @(string.Format("Yes")) }
+                        }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts
+{
+    <script>
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+
+    new $.fn.dataTable.FixedHeader( table );
+} );
+    </script>
+}

@@ -1,0 +1,13 @@
+<h2 class="text-center">ScheduleDetail API @ViewBag.Title</h2>
+   
+<div ng-app="vScheduleDetailsApp" ng-controller="vScheduleDetailsController">
+        <ul>
+            <li ng-repeat="vScheduleDetail in vScheduleDetails">
+                <h2>{{vScheduleDetail.FamilyId}} {{vScheduleDetail.PersonId}}</h2>
+            </li>
+        </ul>
+    </div>
+<script src="~/lib/angular/angular.js"></script>
+<script src="~/app/vScheduleDetailsApp.js"></script>
+<script src="~/app/vScheduleDetailsFactory.js"></script>
+<script src="~/app/vScheduleDetailsController.js"></script>

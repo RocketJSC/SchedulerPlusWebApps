@@ -1,0 +1,140 @@
+@model IEnumerable<SP_Common_Classes.Models.DB.vRosterReport>
+
+<h2 class="text-center">Roster Report @ViewBag.Title</h2>
+
+<table id="myTable" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CalcFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                Parent 1<br />Parent 2
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PottyTraining)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RosterNotes)
+            </th>
+            <th>
+                Active<br />Visitor
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CalcFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @{
+                        string shortDate = item.BirthDate.ToString("MM/dd/yyyy");
+                    }
+                    @Html.DisplayFor(m => shortDate)
+                </td>
+                <td>
+                    @{Boolean boolIsNull = string.IsNullOrEmpty(item.Parent1MobileNumber.Trim()); }
+                    @{Boolean boolIsAdult = false;}
+                    @{Boolean boolIsNoPerson = string.IsNullOrEmpty(item.Parent1LastName);}
+                    @if (item.FamilyPosition == "1" || item.FamilyPosition == "2")
+                    {
+                        boolIsAdult = true;
+                    }
+                    @{
+                        if (boolIsNoPerson)
+                        {
+                            @(string.Format(" "))
+                        }
+                        else
+                        {
+                            if (!boolIsAdult)
+                            {
+                                if (boolIsNull)
+                                {
+                                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent1PersonId">@(string.Format("{0} {1}", item.Parent1FirstName, item.Parent1LastName))</a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent1PersonId">@(string.Format("{0} {1} ({2})", item.Parent1FirstName, item.Parent1LastName, item.Parent1MobileNumber.Trim()))</a>
+                                }
+                            }
+                        }
+                    }
+                    <br />
+                    @{boolIsNull = string.IsNullOrEmpty(item.Parent2MobileNumber.Trim()); }
+                    @{boolIsAdult = false;}
+                    @{boolIsNoPerson = string.IsNullOrEmpty(item.Parent2LastName);}
+                    @if (item.FamilyPosition == "1" || item.FamilyPosition == "2")
+                    {
+                        boolIsAdult = true;
+                    }
+                    @{
+                        if (boolIsNoPerson)
+                        {
+                            @(string.Format(" "))
+                        }
+                        else
+                        {
+                            if (!boolIsAdult)
+                            {
+                                if (boolIsNull)
+                                {
+                                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent2PersonId">@(string.Format("{0} {1}", item.Parent2FirstName, item.Parent2LastName))</a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="vPersons" asp-action="Details" asp-route-id="@item.Parent2PersonId">@(string.Format("{0} {1} ({2})", item.Parent2FirstName, item.Parent2LastName, item.Parent2MobileNumber.Trim()))</a>
+                                }
+                            }
+                        }
+                    }
+                </td>
+                <td>
+                    @{if (item.PottyTraining == "1")
+                        { @(string.Format("Yes")) }
+                        else
+                        { @(string.Format("No"))}
+                        }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RosterNotes)
+                </td>
+                <td>
+                    @{
+                        if (item.Active == "1")
+                        { @(string.Format("Yes")) }
+                        else
+                        { @(string.Format("No"))}
+                    }<br />@{
+                        if (item.Visitor == "1")
+                        { @(string.Format("Yes")) }
+                else
+                { @(string.Format("No"))}
+                    }
+                </td>
+            </tr>
+                        }
+    </tbody>
+</table>
+@section Scripts
+{
+    <script>
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+
+    new $.fn.dataTable.FixedHeader( table );
+} );
+    </script>
+}

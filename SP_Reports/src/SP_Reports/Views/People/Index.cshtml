@@ -1,0 +1,287 @@
+@model IEnumerable<SP_Common_Classes.Models.DB.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLastActivity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowupInd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowupNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoesByName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileProvider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaidStaff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneType1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneType2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneType3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PottyTraining)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimaryContactMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RosterNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RosterReview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateProvince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Suffix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TextAllowed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebAccessAllowed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebLogonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZipPostalCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.County)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAdded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLastActivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowupInd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowupNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoesByName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileProvider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaidStaff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneType1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneType2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneType3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PottyTraining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryContactMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RosterNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RosterReview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateProvince)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suffix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TextAllowed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visitor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebAccessAllowed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebLogonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipPostalCode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PersonId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,120 @@
+@model SP_Common_Classes.Models.DB.vVisitorAttendance
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>vVisitorAttendance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendanceHdrId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttendanceHdrId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendedVisitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttendedVisitor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalcFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalcFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassAttended)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassAttendedDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassAttendedDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateAttended)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyPosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FamilyPosition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaidStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaidStaff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1CalcFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1CalcFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1MobileNbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent1MobileNbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2CalcFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2CalcFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2MobileNbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Parent2MobileNbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonVisitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PersonVisitor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TimeAttended)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AttendanceDtlId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
