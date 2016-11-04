@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace SP_Reports.Models.AccountViewModels
+namespace SP_Common_Classes.Models.AccountViewModels
 {
     public class SendCodeViewModel
     {

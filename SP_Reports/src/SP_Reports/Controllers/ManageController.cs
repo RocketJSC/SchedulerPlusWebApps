@@ -4,11 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SP_Reports.Models.ManageViewModels;
+using SP_Common_Classes.Models.ManageViewModels;
 using SP_Reports.Services;
 using SP_Common_Classes.Models;
 using SP_Common_Classes.Models.DB;
-using SP_Reports.ViewModels.ManageViewModels;
 
 namespace SP_Reports.Controllers
 {

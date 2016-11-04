@@ -1,5 +1,5 @@
---temp-output:D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\obj\Release\netcoreapp1.0\
---out:D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\bin\Release\netcoreapp1.0\SP_Reports.dll
+--temp-output:D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\obj\Release\netcoreapp1.0\
+--out:D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\bin\Release\netcoreapp1.0\SP_Reports.dll
 --define:RELEASE
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -187,29 +187,29 @@
 --reference:C:\Users\lindahl\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\lindahl\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\lindahl\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---reference:D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Common_Classes\bin\Release\netcoreapp1.0\SP_Common_Classes.dll
---resource:"D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\obj\Release\netcoreapp1.0\SP_Reportsdotnet-compile.deps.json",SP_Reports.deps.json
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Program.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Startup.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\AccountController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\HomeController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\ManageController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\PeopleController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vAttendanceReportsController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vFamilyReportsController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vLastAttendedReportsController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vPersonsController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vRosterReportsController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vScheduleDetailsAPI.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Controllers\vVisitorAttendancesController.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\00000000000000_CreateIdentitySchema.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\20160822184805_MyFirstMigration.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\20160822184805_MyFirstMigration.Designer.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\20160823131024_Migration1.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\20160823131024_Migration1.Designer.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Data\Migrations\ApplicationDbContextModelSnapshot.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Services\IEmailSender.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Services\ISmsSender.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\Services\MessageServices.cs
-D:\SchedulerPlus Web Apps\SP_Reports\src\SP_Reports\ViewComponents\Person.cs
+--reference:D:\SchedulerPlusWebApps\SP_Reports\src\SP_Common_Classes\bin\Release\netcoreapp1.0\SP_Common_Classes.dll
+--resource:"D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\obj\Release\netcoreapp1.0\SP_Reportsdotnet-compile.deps.json",SP_Reports.deps.json
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Program.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Startup.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\AccountController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\HomeController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\ManageController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\PeopleController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vAttendanceReportsController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vFamilyReportsController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vLastAttendedReportsController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vPersonsController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vRosterReportsController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vScheduleDetailsAPI.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Controllers\vVisitorAttendancesController.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\00000000000000_CreateIdentitySchema.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\20160822184805_MyFirstMigration.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\20160822184805_MyFirstMigration.Designer.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\20160823131024_Migration1.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\20160823131024_Migration1.Designer.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Data\Migrations\ApplicationDbContextModelSnapshot.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Services\IEmailSender.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Services\ISmsSender.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\Services\MessageServices.cs
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\ViewComponents\Person.cs

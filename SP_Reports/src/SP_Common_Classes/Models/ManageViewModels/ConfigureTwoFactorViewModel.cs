@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace SP_Reports.Models.ManageViewModels
+namespace SP_Common_Classes.Models.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

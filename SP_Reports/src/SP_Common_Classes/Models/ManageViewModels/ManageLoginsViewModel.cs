@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace SP_Reports.ViewModels.ManageViewModels
+namespace SP_Common_Classes.Models.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

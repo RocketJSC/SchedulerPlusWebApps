@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SP_Reports.Models.AccountViewModels
+namespace SP_Common_Classes.Models.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

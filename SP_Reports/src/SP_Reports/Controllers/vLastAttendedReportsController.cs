@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SP_Common_Classes.Models.DB;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SP_Reports.Controllers
 {
+    [Authorize]
     public class vLastAttendedReportsController : Controller
     {
         private readonly ApplicationDbContext _context;

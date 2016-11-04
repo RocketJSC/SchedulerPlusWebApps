@@ -1,5 +1,5 @@
---temp-output:D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\obj\Debug\netcoreapp1.0\
---out:D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\bin\Debug\netcoreapp1.0\SP_API.dll
+--temp-output:D:\SchedulerPlusWebApps\SP_API\src\SP_API\obj\Debug\netcoreapp1.0\
+--out:D:\SchedulerPlusWebApps\SP_API\src\SP_API\bin\Debug\netcoreapp1.0\SP_API.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -198,13 +198,13 @@
 --reference:C:\Users\lindahl\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\lindahl\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --reference:C:\Users\lindahl\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll
---reference:D:\Scheduler+Plus Web Apps\SP_Reports\src\SP_Common_Classes\bin\Debug\netcoreapp1.0\SP_Common_Classes.dll
---resource:"D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\obj\Debug\netcoreapp1.0\SP_APIdotnet-compile.deps.json",SP_API.deps.json
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Program.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Startup.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Controllers\vPersonController.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Controllers\vScheduleDetailController.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Repository\IvPersonRepository.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Repository\IvScheduleDetailRepository.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Repository\vPersonRepository.cs
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\Repository\vScheduleDetailRepository.cs
+--reference:D:\SchedulerPlusWebApps\SP_Reports\src\SP_Common_Classes\bin\Debug\netcoreapp1.0\SP_Common_Classes.dll
+--resource:"D:\SchedulerPlusWebApps\SP_API\src\SP_API\obj\Debug\netcoreapp1.0\SP_APIdotnet-compile.deps.json",SP_API.deps.json
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Program.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Startup.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Controllers\vPersonController.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Controllers\vScheduleDetailController.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Repository\IvPersonRepository.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Repository\IvScheduleDetailRepository.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Repository\vPersonRepository.cs
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\Repository\vScheduleDetailRepository.cs

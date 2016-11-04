@@ -1,2 +1,4 @@
-#:D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\SP_API.xproj
-D:\Scheduler+Plus Web Apps\SP_API\src\SP_API\SP_API.xproj|D:\Scheduler+Plus Web Apps\SP_Reports\src\SP_Common_Classes\SP_Common_Classes.xproj
+#:D:\SchedulerPlusWebApps\SP_API\src\SP_API\SP_API.xproj
+D:\SchedulerPlusWebApps\SP_API\src\SP_API\SP_API.xproj|D:\SchedulerPlusWebApps\SP_Reports\src\SP_Common_Classes\SP_Common_Classes.xproj
+#:D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\SP_Reports.xproj
+D:\SchedulerPlusWebApps\SP_Reports\src\SP_Reports\SP_Reports.xproj|D:\SchedulerPlusWebApps\SP_Reports\src\SP_Common_Classes\SP_Common_Classes.xproj

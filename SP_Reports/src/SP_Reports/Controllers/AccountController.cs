@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using SP_Common_Classes.Models;
-using SP_Reports.Models.AccountViewModels;
+using SP_Common_Classes.Models.AccountViewModels;
 using SP_Reports.Services;
 
 namespace SP_Reports.Controllers
