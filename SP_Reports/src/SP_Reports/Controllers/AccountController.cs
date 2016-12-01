@@ -11,9 +11,34 @@ using Microsoft.Extensions.Logging;
 using SP_Common_Classes.Models;
 using SP_Common_Classes.Models.AccountViewModels;
 using SP_Reports.Services;
+using SP_Common_Classes.Models.DB;
 
 namespace SP_Reports.Controllers
 {
+    public class CustomUserValidator : UserValidator<ApplicationUser>
+    {
+        private readonly ApplicationDbContext _context;
+        public CustomUserValidator(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public override async Task<IdentityResult> ValidateAsync(UserManager<ApplicationUser> manager, ApplicationUser user)
+        {
+            IdentityResult baseResult = await base.ValidateAsync(manager, user);
+            List<IdentityError> errors = new List<IdentityError>(baseResult.Errors);
+
+            var result = (from vPerson in _context.vPerson
+                           select vPerson).Where(d => d.EmailAddress == user.Email).ToList();
+            if (result.Count() == 0)
+            {
+                IdentityError invalidEmailError = Describer.InvalidEmail(user.Email);
+                invalidEmailError.Description += " Email address NOT on file";
+                errors.Add(invalidEmailError);
+            }
+
+            return errors.Count > 0 ? IdentityResult.Failed(errors.ToArray()) : IdentityResult.Success;
+        }
+    }
     [Authorize]
     public class AccountController : Controller
     {
@@ -22,19 +47,22 @@ namespace SP_Reports.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private readonly ApplicationDbContext _context;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            _context = context;
         }
 
         //
@@ -104,7 +132,7 @@ namespace SP_Reports.Controllers
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
-            {
+            { 
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

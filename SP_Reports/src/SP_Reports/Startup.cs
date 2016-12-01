@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using SP_Common_Classes.Models;
 using SP_Reports.Services;
 using SP_Common_Classes.Models.DB;
+using Microsoft.AspNetCore.Identity;
+using SP_Reports.Controllers;
 
 namespace SP_Reports
 {
@@ -52,6 +54,7 @@ namespace SP_Reports
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddTransient<IUserValidator<ApplicationUser>, CustomUserValidator>();
 
             services.Configure<IdentityOptions>(options =>
             {
