@@ -75,7 +75,14 @@ namespace SP_Reports.Controllers
                 }
                 else
                 {
-                    ViewBag.Title = ViewBag.Title + " for All Rooms";
+                    if (selectDateAttended.HasValue)
+                    {
+                        ViewBag.Title = ViewBag.Title +  " for Date " + selectDateAttended.ToString().Split(' ')[0];
+                    }
+                    else
+                    {
+                        ViewBag.Title = ViewBag.Title + " for All Rooms";
+                    }
                 }
             }
             else

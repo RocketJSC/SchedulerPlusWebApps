@@ -65,9 +65,6 @@
                                     </li>
                                 }
                             </ul>
-
-
-
                         </li>
                         <li><a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectPaidStaff="1">Paid Staff</a></li>
                     </ul>
@@ -101,6 +98,27 @@
                     </ul>
                 </li>
             </ul>
+            <h2 class="text-center">Reports</h2>
+            <ul>
+                <li>
+                    Attendance (con't)
+                    <ul>
+                        <li>
+                            Visitors By Date 
+                            <ul>
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        @{string shortDate = item.DateAttended.ToString("MM/dd/yyyy");
+                                        }
+                                        <a asp-area="" asp-controller="vAttendanceReports" asp-action="Index" asp-route-selectDateAttended="@item.DateAttended" asp-route-selectVisitor="1">@shortDate</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                     </ul>
+                </li>
+             </ul>
         </div>
         <div class="col-md-3">
             <h2 class="text-center">Schedules</h2>
