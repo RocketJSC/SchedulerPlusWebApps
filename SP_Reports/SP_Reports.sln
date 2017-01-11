@@ -15,8 +15,6 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SP_Reports", "src\SP_Report
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SP_Common_Classes", "src\SP_Common_Classes\SP_Common_Classes.xproj", "{8E60EB92-DB8B-494B-A668-9BD0D22E2053}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SP_API", "..\SP_API\src\SP_API\SP_API.xproj", "{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +36,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3} = {61FD7730-18A8-4B0A-B6F5-FCB846C202CC}
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053} = {61FD7730-18A8-4B0A-B6F5-FCB846C202CC}
-		{1B1646C9-A408-4E3B-82D9-ADC7673EC1BD} = {61FD7730-18A8-4B0A-B6F5-FCB846C202CC}
 	EndGlobalSection
 EndGlobal
