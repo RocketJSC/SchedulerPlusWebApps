@@ -3900,12 +3900,12 @@
           "Microsoft.AspNetCore.Hosting": "1.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.1.0",
+          "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+          "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
           "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0",
-          "Microsoft.NETCore.App": "1.1.0",
-          "microsoft.aspnetcore.server.iisintegration": "1.1.0",
-          "microsoft.aspnetcore.server.kestrel": "1.1.0"
+          "Microsoft.NETCore.App": "1.1.0"
         },
         "compile": {
           "netcoreapp1.1/SP_Common_Classes.dll": {}
@@ -10396,7 +10396,6 @@
       "Microsoft.Extensions.Logging.Console >= 1.1.0",
       "Microsoft.Extensions.Logging.Debug >= 1.1.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.1.0",
-      "Microsoft.NETCore.App >= 1.1.0",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0",
       "SP_Common_Classes >= 1.0.0-*"
     ],

@@ -2805,6 +2805,8 @@
           "Microsoft.AspNetCore.Hosting": "1.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.1.0",
+          "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+          "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
           "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0"
@@ -5495,6 +5497,8 @@
           "Microsoft.AspNetCore.Hosting": "1.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.1.0",
+          "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+          "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
           "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0"
