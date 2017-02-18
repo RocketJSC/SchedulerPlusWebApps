@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1/",
-    "signature": "e0515f02f1758ff347372e986f62e760e7c4e09d"
+    "signature": "22eaea3731105b0e7910d50c42dcb9bc764b9a2f"
   },
   "compilationOptions": {
     "defines": [
@@ -17,6 +17,7 @@
       "SP_Reports/1.0.0": {
         "dependencies": {
           "Microsoft.NETCore.App": "1.1.0",
+          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -82,6 +83,26 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
@@ -2820,6 +2841,7 @@
       "SP_Reports/1.0.0": {
         "dependencies": {
           "Microsoft.NETCore.App": "1.1.0",
+          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -2885,6 +2907,26 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
@@ -5534,6 +5576,16 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-0u+Aj0a8PmqUcU0A3ugWH1lE/8jBiww5zjCHTw5RZCTRc6/0M/AVxENDUXcBJXxsVAIkTUXi6iKY8zhFmvLWcw=="
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zz4xPNBnXPe4BUKgbNWOz+MsYkBZaqSq3ObMWuoyLU1so0Mw7WsknXsplFrXvik4KljtgtlP+KjM6tX0hPHB2g=="
+    },
+    "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jRUrOYmi/CW1zeA+Ympgeb0s7v6MrkBuSvUmxH3Q/5vAL4hWbp6IuR54v6KtET9SWLewhTvHR2lzspYO2XuUYw=="
     },
     "Microsoft.AspNetCore.Authorization/1.1.0": {
       "type": "package",

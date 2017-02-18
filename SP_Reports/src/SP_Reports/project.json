@@ -2,6 +2,7 @@
   "userSecretsId": "aspnet-SP_Reports-fe51af8e-b15e-40b8-a748-9260b3185259",
 
   "dependencies": {
+    "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.0",
     "Microsoft.AspNetCore.Mvc": "1.1.0",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -26,7 +27,8 @@
   "tools": {
     "BundlerMinifier.Core": "2.2.306",
     "Microsoft.AspNetCore.Razor.Tools": "1.1.0-preview4-final",
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final",
+    "Microsoft.Extensions.SecretManager.Tools": "1.1.0-preview4-final"
   },
 
   "frameworks": {
