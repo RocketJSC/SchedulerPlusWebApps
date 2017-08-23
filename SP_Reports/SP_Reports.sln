@@ -1,19 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{61FD7730-18A8-4B0A-B6F5-FCB846C202CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{266E9708-52DB-4998-A1F6-8BB8D8802ECC}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
 		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SP_Reports", "src\SP_Reports\SP_Reports.xproj", "{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SP_Reports", "src\SP_Reports\SP_Reports.csproj", "{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SP_Common_Classes", "src\SP_Common_Classes\SP_Common_Classes.xproj", "{8E60EB92-DB8B-494B-A668-9BD0D22E2053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SP_Common_Classes", "src\SP_Common_Classes\SP_Common_Classes.csproj", "{8E60EB92-DB8B-494B-A668-9BD0D22E2053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +24,12 @@ Global
 		{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC0AC5E-1D3C-4617-9E75-1AF37A6CF8E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E60EB92-DB8B-494B-A668-9BD0D22E2053}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
